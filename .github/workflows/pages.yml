@@ -26,6 +26,21 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      # deploy:jlpt 는 프로젝트 전체를 빌드하므로 ONDO 의 다른 페이지·엑셀 파일까지 따라온다.
+      # JLPT 사이트에 필요한 것만 남긴다 (한글 이름 파일이 Pages 배포를 막기도 한다).
+      - name: Keep only the JLPT site
+        run: |
+          shopt -s dotglob
+          for f in *; do
+            case "$f" in
+              .git|.github|.nojekyll|404.html|404|__next.*|index.html|index.txt|_next|_not-found|jlpt-n3|n3|favicon.ico|audio|data) ;;
+              *) rm -rf -- "$f" ;;
+            esac
+          done
+          find data -mindepth 1 -maxdepth 1 ! -name jlpt-n3 -exec rm -rf {} +
+          find audio -mindepth 1 -maxdepth 1 ! -name jlpt-n3 -exec rm -rf {} +
+          echo "files: $(find . -type f -not -path './.git/*' -not -path './.github/*' | wc -l)"
+          du -sh --exclude=.git .
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
