@@ -24,7 +24,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -47,3 +47,6 @@ jobs:
           path: ${{ runner.temp }}/_site
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # GitHub 쪽 파일 옮기기(syncing_files)가 가끔 10분(기본값)을 넘겨 실패한다 (2026-11-07 두 번 확인)
+          timeout: 1800000
