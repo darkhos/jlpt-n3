@@ -34,7 +34,7 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/_site"
           for k in .nojekyll index.html index.txt 404.html 404 __next.__PAGE__.txt __next._full.txt __next._tree.txt \
-                   _next _not-found jlpt-n3 n3 favicon.ico data/jlpt-n3 audio/jlpt-n3; do
+                   _next _not-found jlpt-n3 n3 wrong-notes favicon.ico data/jlpt-n3 audio/jlpt-n3; do
             [ -e "$k" ] || continue
             mkdir -p "$RUNNER_TEMP/_site/$(dirname "$k")"
             cp -R "$k" "$RUNNER_TEMP/_site/$k"
