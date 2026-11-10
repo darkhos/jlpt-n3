@@ -4,7 +4,7 @@
     "vocab": 1688,
     "kanji": 387,
     "grammar": 101,
-    "vocabQuestions": 481,
+    "vocabQuestions": 457,
     "grammarQuestions": 220,
     "readingPassages": 20,
     "readingQuestions": 57,
@@ -15,7 +15,7 @@
     {
       "repo": "evanclan/OpenJLPT",
       "url": "https://github.com/evanclan/OpenJLPT",
-      "used": "N3 단어(1,659)·한자(387)·문법(101) 및 Tatoeba 후리가나 예문"
+      "used": "N3 단어(1,659)·한자(387)·문법(101)과 Tatoeba 후리가나 예문 (CC-BY-SA-4.0)"
     },
     {
       "repo": "agsana111/jlpt-kanji",
@@ -25,22 +25,28 @@
     {
       "repo": "IZH318/KarylJLPT_Lite",
       "url": "https://github.com/IZH318/KarylJLPT_Lite",
-      "used": "N3 필수 어휘 한국어 사전 뜻풀이 (1,135개 N3 전용 필터링)"
+      "used": "N3 필수 어휘 한국어 사전 뜻풀이"
     },
     {
       "repo": "Nya-Nya-Hoshino/quiz-platform",
       "url": "https://github.com/Nya-Nya-Hoshino/quiz-platform",
-      "used": "N3 문자·어휘(481문항), 문법(220문항), 글의 문법(20문항) — N4/N2 문항 100% 배제, N3만 추출"
+      "used": "'N3 자율 연습' 묶음의 문자·어휘 171문항, 문법 220문항, 글의 문법 지문 4개 — 실제 기출이 아닌 연습 문제"
     },
     {
-      "repo": "Yukitchy/dokkai-dojo & lastiwan89/my_jlpt_dokkai",
+      "repo": "사이트 자체 제작",
+      "url": "https://github.com/evanclan/OpenJLPT",
+      "used": "문자·어휘 286문항 — OpenJLPT 단어와 Tatoeba 예문으로 자동 생성한 연습 문제 (사람이 읽고 답이 모호한 문항은 뺌)"
+    },
+    {
+      "repo": "Yukitchy/dokkai-dojo · lastiwan89/my_jlpt_dokkai · Fasty1013/jlpt-dokkai",
       "url": "https://github.com/Yukitchy/dokkai-dojo",
-      "used": "N3 단문·중문·장문·정보검색 독해 지문 및 근거 문장 해설"
+      "used": "N3 독해 연습 지문 15개 — 개인이 만든 글과 NHK 뉴스를 학습용으로 고친 글 (지문 1개는 사이트 자체 제작)"
     },
     {
       "repo": "XnoahR/Ayumu",
       "url": "https://github.com/XnoahR/Ayumu",
-      "used": "N3 청해 연습 22세트(111문항) 원어민 MP3 오디오 및 일본어 대본·정답"
+      "used": "N3 청해 연습 22세트(112문항) 음성·대본·정답 — 연습 사이트 japanesetest4you에서 온 자료"
     }
-  ]
+  ],
+  "note": "이 사이트의 문제는 실제 JLPT 기출문제가 아니라 공개 저장소의 연습 문제와 사이트가 만든 연습 문제입니다."
 }
